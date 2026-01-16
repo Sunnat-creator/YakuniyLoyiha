@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTM Online Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>DTM Test</h1>
+            <div class="timer-box">
+                Vaqt: <span id="timer">10:00</span>
+            </div>
+        </header>
+
+        <div id="quiz-container" class="quiz-card">
+            <div class="question-header">
+                <span id="question-number">Savol 1</span>
+            </div>
+            <h2 id="question-text">Savollar yuklanmoqda...</h2>
+            
+            <div id="options-container" class="options">
+                </div>
+
+            <button id="next-btn" class="btn-next" style="display: none;">Keyingi savol</button>
+        </div>
+    </div>
+
+    <div id="result-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Test Yakunlandi!</h2>
+            <p>Sizning natijangiz:</p>
+            <h1 id="score-text">0 / 0</h1>
+            <button onclick="restartQuiz()" class="btn-restart">Qayta ishlash</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #448AFF; /* Oq va Ko'k mavzu */
+    --text-color: #333;
+    --bg-color: #f4f6f8;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Header va Timer */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.timer-box {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Savol Kartochkasi */
+.quiz-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.question-header {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+#question-text {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* Variantlar */
+.options button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: var(--white);
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.2s;
+}
+
+.options button:hover {
+    border-color: var(--primary-color);
+    background-color: #f0f7ff;
+}
+
+.options button.selected {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+/* Keyingi tugmasi */
+.btn-next {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    margin-top: 15px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.btn-next:hover {
+    opacity: 0.9;
+}
+
+/* Modal (Natija) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.modal-content h1 {
+    color: var(--primary-color);
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.btn-restart {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+}
