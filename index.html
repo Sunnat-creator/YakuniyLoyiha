@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTM Premium Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+    <div id="auth-modal" class="modal">
+        <div class="glass-card auth-box">
+            <h2 data-i18n="login_title">Xush Kelibsiz</h2>
+            <div class="divider"><span data-i18n="or">yoki</span></div>
+            <input type="text" id="reg-login" placeholder="Login">
+            <input type="password" id="reg-password" placeholder="Parol">
+            <button id="login-submit" class="primary-btn" data-i18n="login_btn">Kirish</button>
+        </div>
+    </div>
+
+    <div id="main-app" class="container hidden">
+        <nav class="navbar">
+            <h1 class="logo">DTM <span>Online</span></h1>
+            <div class="nav-tools">
+                <select id="lang-select" class="lang-picker">
+                    <option value="uz">O'zbekcha</option>
+                    <option value="en">English</option>
+                    <option value="ru">Русский</option>
+                </select>
+                <div class="timer-display">
+                    <span id="timer">10:00</span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="quiz-area">
+            <div class="progress-bar"><div id="progress" class="progress-fill"></div></div>
+            <div class="quiz-card">
+                <div class="q-header">
+                    <span id="question-number" class="q-badge">Savol 1</span>
+                </div>
+                <h2 id="question-text">Savol yuklanmoqda...</h2>
+                <div id="options-container" class="options-grid"></div>
+                <button id="next-btn" class="next-btn hidden" data-i18n="next_btn">Keyingi</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cert-modal" class="modal hidden">
+        <div class="cert-card" id="cert-to-print">
+            <div class="cert-content">
+                <div class="cert-watermark">DTM</div>
+                <h3 data-i18n="cert_header">YAKUNIY SERTIFIKAT</h3>
+                <p data-i18n="cert_sub">Ushbu hujjat egasi</p>
+                <h1 id="user-display-name">Foydalanuvchi</h1>
+                <p id="cert-desc"></p>
+                <div class="cert-info">
+                    <div><strong data-i18n="cert_date">Sana:</strong> <br> 21.01.2026</div>
+                    <div><strong data-i18n="cert_score">Natija:</strong> <br> <span id="cert-score">0/0</span></div>
+                </div>
+                <div class="cert-stamp">MUKAMMAL</div>
+            </div>
+            <div class="cert-btns">
+                <button id="download-pdf" class="primary-btn" data-i18n="download_btn">Yuklab olish (PDF)</button>
+                <button onclick="location.reload()" class="secondary-btn" data-i18n="restart_btn">Qayta boshlash</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
